@@ -1,0 +1,122 @@
+car Parking Management System Using Linked List
+#include <iostream>
+#include <string>
+using namespace std;
+struct Node
+{
+int vehicleNo;
+string ownerName;
+Node* next;
+};
+Node* head = NULL;
+// Add Vehicle
+void addVehicle()
+{
+Node* newNode = new Node;
+cout << "\nEnter Vehicle Number: ";
+cin >> newNode->vehicleNo;
+cout << "Enter Owner Name: ";
+cin >> newNode->ownerName;
+newNode->next = NULL; if (head == NULL)
+head = newNode;
+else
+{
+Node* temp = head;
+while (temp->next != NULL)
+temp = temp->next;
+temp->next = newNode;
+}
+cout << "\nVehicle Added Successfully!\n";
+}
+// Display Vehicles
+void display()
+{
+Node* temp = head;
+if (head == NULL)
+{
+cout << "\nParking is Empty!\n";
+return;
+} cout << "\n--- Parked Vehicles ---\n";
+while (temp != NULL)
+{
+cout << "Vehicle No: " << temp->vehicleNo
+<< " | Owner: " << temp->ownerName << endl;
+temp = temp->next;
+}
+}
+// Search Vehicle
+void searchVehicle()
+{
+Node* temp = head;
+int no;
+cout << "\nEnter Vehicle Number: ";
+cin >> no;
+while (temp != NULL)
+{
+if (temp->vehicleNo == no)
+{
+cout << "\nVehicle Found!"; cout << "\nOwner: " << temp->ownerName << endl;
+return;
+}
+temp = temp->next;
+}
+cout << "\nVehicle Not Found!\n";
+}
+// Delete Vehicle
+void deleteVehicle()
+{
+Node* temp = head;
+Node* prev = NULL;
+int no;
+cout << "\nEnter Vehicle Number to Remove: ";
+cin >> no;
+while (temp != NULL && temp->vehicleNo != no)
+{
+prev = temp;
+temp = temp->next;
+} if (temp == NULL)
+{
+cout << "\nVehicle Not Found!\n";
+return;
+}
+if (prev == NULL)
+head = temp->next;
+else
+prev->next = temp->next;
+delete temp;
+cout << "\nVehicle Removed Successfully!\n";
+}
+// Main Function
+int main()
+{
+int choice;
+while (true)
+{
+cout << "\n\n===== PARKING MANAGEMENT =====
+";
+cout << "\n1. Add Vehicle";
+cout << "\n2. Display Vehicles"; cout << "\n3. Search Vehicle";
+cout << "\n4. Remove Vehicle";
+cout << "\n5. Exit";
+cout << "\nEnter Choice: ";
+cin >> choice;
+switch (choice)
+{
+case 1:
+addVehicle();
+break;
+case 2:
+display();
+break;
+case 3:
+searchVehicle();
+break;
+case 4:
+deleteVehicle();
+break;
+case 5: return 0;
+default:
+cout << "\nInvalid Choice!";
+}
+}
+}
