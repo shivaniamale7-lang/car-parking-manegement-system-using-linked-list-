@@ -1,0 +1,24 @@
+Algorithm
+Algorithm: Car Parking Management Using Linked List
+Step 1: Start the program.
+Step 2: Define a structure named Node.
+Step 3: Store the following information in each node:
+Vehicle number
+Owner name
+Pointer to the next node
+Step 4: Initialize head = NULL.
+Step 5: Display the parking management menu.
+Step 6: Accept the user's choice.
+Step 7: If the user selects Add Vehicle:
+Create a new node.
+Enter the vehicle number.
+Enter the owner's name.
+Set newNode->next = NULL.
+Check whether head == NULL.
+If the list is empty, make head = newNode.
+Otherwise, start from head.
+Traverse the linked list until the last node is reached.
+Connect the last node to the new node.
+Step 8: If other operations such as display, search, or remove are present in the complete code, perform the selected operation.
+Step 9: Continue displaying the menu until the user selects the Exit option.
+Step 10: Stop the program.
