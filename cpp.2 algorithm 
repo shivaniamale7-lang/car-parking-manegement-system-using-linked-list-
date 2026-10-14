@@ -1,0 +1,21 @@
+• Algorithm
+
+Step 1: Start
+
+Step 2: Define a Node structure to hold vehicle number, owner name, and a pointer to the next vehicle.
+
+Step 3: Show menu options continuously: Add, Display, Search, Remove, and exit.
+
+Step 4: Check full status during insertion; if currentCount == MAX_CAPACITY, display "Parking full" and stop.
+
+Step 5: Add vehicle by creating a new node at the end of the list and increasing currentCount by 1.
+
+Step 6: Display list by traveling from head to the end, printing all vehicle numbers and names.
+
+Step 7: Search vehicle by matching the user's input number with each node sequentially.
+
+Step 8: Locate target node and its previous node when removing a vehicle from parking.
+
+Step 9: Remove vehicle by changing pointers to bypass the target node, freeing memory, and decreasing currentCount by 1.
+
+Step 10: Exit and stop program execution when the user chooses option 5.
