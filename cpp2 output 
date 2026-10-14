@@ -1,0 +1,66 @@
+===== PARKING MANAGEMENT =====
+1. Add Vehicle
+2. Display Vehicles
+3. Search Vehicle
+4. Remove Vehicle
+5. Exit
+Enter Choice: 1
+
+Enter Vehicle Number: MH12AB1234
+Vehicle Added Successfully!
+
+===== PARKING MANAGEMENT =====
+1. Add Vehicle
+2. Display Vehicles
+3. Search Vehicle
+4. Remove Vehicle
+5. Exit
+Enter Choice: 1
+
+Enter Vehicle Number: MH14CD5678
+Vehicle Added Successfully!
+
+===== PARKING MANAGEMENT =====
+1. Add Vehicle
+2. Display Vehicles
+3. Search Vehicle
+4. Remove Vehicle
+5. Exit
+Enter Choice: 1
+
+Enter Vehicle Number: MH20EF9012
+Vehicle Added Successfully!
+
+===== PARKING MANAGEMENT =====
+1. Add Vehicle
+2. Display Vehicles
+3. Search Vehicle
+4. Remove Vehicle
+5. Exit
+Enter Choice: 1
+
+Enter Vehicle Number: MH15GH3456
+Vehicle Added Successfully!
+
+===== PARKING MANAGEMENT =====
+1. Add Vehicle
+2. Display Vehicles
+3. Search Vehicle
+4. Remove Vehicle
+5. Exit
+Enter Choice: 1
+
+Enter Vehicle Number: MH18JK7890
+Vehicle Added Successfully!
+
+Parking is Full! No more space available.
+
+===== PARKING MANAGEMENT =====
+1. Add Vehicle
+2. Display Vehicles
+3. Search Vehicle
+4. Remove Vehicle
+5. Exit
+Enter Choice: 5
+
+Exiting the system...
