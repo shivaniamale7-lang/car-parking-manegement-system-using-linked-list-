@@ -1,0 +1,67 @@
+. START
+
+2. Define a structure 'Node' to represent a parked vehicle with fields:
+   - vehicleNo (Integer)
+   - ownerName (String)
+   - next (Pointer to the next Node)
+
+3. Initialize a global pointer 'head' to NULL (indicates parking is empty).
+
+4. CHOOSE OPERATION (Menu Driven Loop):
+   While true, display options to the user:
+   - Option 1: Add Vehicle (Insert at End)
+   - Option 2: Display Vehicles (Traversal)
+   - Option 3: Search Vehicle
+   - Option 4: Remove Vehicle (Deletion)
+   - Option 5: Exit
+
+5. IF USER CHOOSES OPTION 1 (Add Vehicle):
+   a. Create a new dynamically allocated memory block for 'newNode'.
+   b. Input vehicleNo and ownerName from the user.
+   c. Set newNode->next = NULL.
+   d. IF head == NULL:
+      - Set head = newNode.
+      ELSE:
+      - Create a temporary pointer 'temp' and set temp = head.
+      - Traverse until temp->next != NULL.
+      - Set temp->next = newNode.
+   e. Print "Vehicle Added Successfully!".
+
+6. IF USER CHOOSES OPTION 2 (Display Vehicles):
+   a. IF head == NULL:
+      - Print "Parking is Empty!" and return to menu.
+   b. Create a temporary pointer 'temp' and set temp = head.
+   c. While temp != NULL:
+      - Print temp->vehicleNo and temp->ownerName.
+      - Move to next node: temp = temp->next.
+
+7. IF USER CHOOSES OPTION 3 (Search Vehicle):
+   a. Input the vehicleNo to be searched from the user.
+   b. Create a temporary pointer 'temp' and set temp = head.
+   c. While temp != NULL:
+      - IF temp->vehicleNo == searched number:
+        - Print "Vehicle Found!" along with ownerName.
+        - Return to menu.
+      - Move to next node: temp = temp->next.
+   d. IF loop finishes and vehicle is not found, print "Vehicle Not Found!".
+
+8. IF USER CHOOSES OPTION 4 (Remove Vehicle):
+   a. Input the vehicleNo to be removed from the user.
+   b. Create two pointers 'temp = head' and 'prev = NULL'.
+   c. Traverse the list until temp != NULL and temp->vehicleNo != input number:
+      - Set prev = temp.
+      - Set temp = temp->next.
+   d. IF temp == NULL:
+      - Print "Vehicle Not Found!" and return to menu.
+   e. IF prev == NULL (First node needs to be removed):
+      - Set head = temp->next.
+      ELSE (Middle or Last node needs to be removed):
+      - Set prev->next = temp->next.
+   f. Free/Delete the memory occupied by 'temp'.
+   g. Print "Vehicle Removed Successfully!".
+
+9. IF USER CHOOSES OPTION 5 (Exit):
+   - Terminate the program execution.
+
+10. END
+==================================
